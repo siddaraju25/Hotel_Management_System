@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hotel Management System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Hotel Management System</h1>
+
+        <h3>Book a Room</h3>
+        <input type="text" id="guestName" placeholder="Guest Name" required />
+        <select id="roomType">
+            <option value="Single">Single</option>
+            <option value="Double">Double</option>
+            <option value="Suite">Suite</option>
+        </select>
+        <button onclick="bookRoom()">Book Now</button>
+
+        <h3>Check Room Availability</h3>
+        <select id="checkRoomType">
+            <option value="Single">Single</option>
+            <option value="Double">Double</option>
+            <option value="Suite">Suite</option>
+        </select>
+        <button onclick="checkAvailability()">Check Availability</button>
+
+        <h3>All Bookings</h3>
+        <div id="bookingList"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
